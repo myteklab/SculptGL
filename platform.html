@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang='en'>
+<head>
+  <meta charset='utf-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>SculptGL</title>
+  <script>window.APP_ID = 'sculptgl';</script>
+  <script src="/assets/platform-bridge.js?v=5"></script>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet'>
+  <link rel='stylesheet' href='css/yagui.css' />
+  <style>
+    @keyframes slideIn { from { transform: translateX(400px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+    @keyframes slideOut { from { transform: translateX(0); opacity: 1; } to { transform: translateX(400px); opacity: 0; } }
+  </style>
+</head>
+<body oncontextmenu='return false;'>
+  <input type='file' id='fileopen' multiple style='display: none' />
+  <input type='file' id='backgroundopen' style='display: none' />
+  <input type='file' id='alphaopen' style='display: none' />
+  <input type='file' id='textureopen' style='display: none' />
+  <input type='file' id='matcapopen' style='display: none' />
+  <div id='viewport'>
+    <canvas id='canvas'></canvas>
+  </div>
+  <script>
+  'use strict';
+  window.addEventListener('load', function () {
+    var app = new window.SculptGL();
+    app.start();
+  });
+  </script>
+  <script src='sculptgl.js'></script>
+  <script src='/platform-adapters/sculptgl-adapter.js?v=5'></script>
+</body>
+</html>

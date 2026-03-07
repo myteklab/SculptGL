@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Background circle -->
+  <circle cx="50" cy="50" r="48" fill="#1a1a2e"/>
+
+  <!-- Sculpted sphere with shading -->
+  <circle cx="46" cy="52" r="22" fill="#7c4dff"/>
+  <circle cx="46" cy="52" r="22" fill="url(#sphereGrad)"/>
+
+  <!-- Sphere gradient for 3D effect -->
+  <defs>
+    <radialGradient id="sphereGrad" cx="0.35" cy="0.35" r="0.65">
+      <stop offset="0%" stop-color="#b388ff"/>
+      <stop offset="50%" stop-color="#7c4dff"/>
+      <stop offset="100%" stop-color="#4a148c"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Sculpt marks on sphere (indentations) -->
+  <path d="M 36 42 Q 40 46 38 50" stroke="#5e35b1" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M 50 40 Q 52 45 48 48" stroke="#5e35b1" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M 42 58 Q 46 55 50 58" stroke="#5e35b1" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+
+  <!-- Sculpting tool (chisel/pen) -->
+  <g transform="rotate(-35, 68, 32)">
+    <!-- Tool handle -->
+    <rect x="64" y="18" width="8" height="24" rx="3" fill="#ff8a65"/>
+    <rect x="64" y="18" width="8" height="6" rx="3" fill="#ffab91"/>
+    <!-- Tool grip lines -->
+    <line x1="65" y1="28" x2="71" y2="28" stroke="#e64a19" stroke-width="0.8"/>
+    <line x1="65" y1="31" x2="71" y2="31" stroke="#e64a19" stroke-width="0.8"/>
+    <!-- Tool tip -->
+    <polygon points="64,42 72,42 68,52" fill="#bdbdbd"/>
+    <polygon points="65,42 71,42 68,48" fill="#e0e0e0"/>
+  </g>
+
+  <!-- Small particles (sculpting debris) -->
+  <circle cx="58" cy="56" r="1.2" fill="#b388ff" opacity="0.6"/>
+  <circle cx="62" cy="50" r="0.9" fill="#b388ff" opacity="0.5"/>
+  <circle cx="55" cy="62" r="1" fill="#b388ff" opacity="0.4"/>
+</svg>
