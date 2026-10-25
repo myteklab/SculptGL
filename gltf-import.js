@@ -123,7 +123,6 @@
       }
       return out4;
     }
-    // INT16 fallback
     var out5 = new Int16Array(total);
     for (var i5 = 0; i5 < count; i5++) {
       var rowOff5 = byteOffset + i5 * stride;
@@ -314,7 +313,6 @@
       var bx = triangles[base + 3], by = triangles[base + 4], bz = triangles[base + 5];
       var cx = triangles[base + 6], cy = triangles[base + 7], cz = triangles[base + 8];
 
-      // Face normal
       var e1x = bx - ax, e1y = by - ay, e1z = bz - az;
       var e2x = cx - ax, e2y = cy - ay, e2z = cz - az;
       var nx = e1y * e2z - e1z * e2y;
@@ -411,7 +409,6 @@
     }
   };
 
-  // Update file menu label
   setTimeout(function () {
     document.querySelectorAll('button, span, div').forEach(function (el) {
       if (el.childNodes.length === 1 && el.childNodes[0].nodeType === 3) {
